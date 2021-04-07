@@ -1,0 +1,6 @@
+package com.techo.cointena
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+}
