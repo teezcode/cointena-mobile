@@ -27,11 +27,13 @@ class AccountOption extends StatelessWidget {
                       onPressed: (){
                         Navigator.push(context, MaterialPageRoute(builder: (context)=> CreateAccount()));
                       },
+                      style: TextButton.styleFrom(
+                          backgroundColor: Color(0xff142A9C)),
                       child: Text('Create Account',
-                          style:TextStyle(fontSize: 20)
+                          style:TextStyle(fontSize: 20,
                       ),
                     ),
-                  ),
+                  ),),
                 ],
               ),
               SizedBox(height: 10,),
@@ -39,7 +41,8 @@ class AccountOption extends StatelessWidget {
                   (){
 
                   },
-                  child: Text('Sign In'))
+                  child: Text('Sign In',
+                  style: TextStyle(color: Colors.white),))
             ],
           ),
         ),
