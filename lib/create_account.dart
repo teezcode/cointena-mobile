@@ -1,6 +1,8 @@
 import 'package:cointena/sign_in.dart';
 import 'package:flutter/material.dart';
 
+import 'widgets/header.dart';
+
 class CreateAccount extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -10,29 +12,9 @@ class CreateAccount extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                width: double.infinity,
-                color: Color(0xff0A144A),
-                padding: EdgeInsets.all(25),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    GestureDetector(
-                      child: Icon(Icons.arrow_back_outlined,
-                        color: Colors.white,),
-                      onTap: (){Navigator.pop(context);},
-                    ),
-                    SizedBox(height: 30,),
-                    Text('Welcome to\n Cointena',
-                      style: TextStyle(fontSize: 40,color: Colors.white),
-                    ),
-                    SizedBox(height: 20,),
-                    Text('In a few steps you can send,recieve and trade cryptocurrency at your convience',
-                      style:TextStyle(fontSize: 20,color: Colors.white) ,
-                    )
-                  ],
-                ),
+              Header(
+                title: 'Welcome to\n Cointena',
+                subtitle: 'In a few steps you can send,recieve and trade cryptocurrency at your convience',
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal:10.0,vertical: 40),
@@ -120,3 +102,4 @@ class CreateAccount extends StatelessWidget {
     );
   }
 }
+

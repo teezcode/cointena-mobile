@@ -1,4 +1,5 @@
 import 'package:cointena/country_selection.dart';
+import 'package:cointena/widgets/header.dart';
 import 'package:flutter/material.dart';
 
 
@@ -11,29 +12,9 @@ class SignIn extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                width: double.infinity,
-                color: Color(0xff0A144A),
-                padding: EdgeInsets.all(25),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    GestureDetector(
-                      child: Icon(Icons.arrow_back_outlined,
-                        color: Colors.white,),
-                      onTap: (){Navigator.pop(context);},
-                    ),
-                    SizedBox(height: 30,),
-                    Text('Sign In',
-                      style: TextStyle(fontSize: 40,color: Colors.white),
-                    ),
-                    SizedBox(height: 20,),
-                    Text('Become a part of the finincial revolution',
-                      style:TextStyle(fontSize: 20,color: Colors.white) ,
-                    )
-                  ],
-                ),
+              Header(
+                title: 'Sign In',
+                subtitle: 'Become a part of the finincial revolution',
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal:10, vertical: 60),
